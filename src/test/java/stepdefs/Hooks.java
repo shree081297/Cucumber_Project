@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.google.common.base.Ticker;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -14,7 +15,7 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 	public static WebDriver driver;
-	public static ExtentReports report =new ExtentReports("HtmlExtentReport.html");
+	public static ExtentReports report =new ExtentReports("HtmlExtentReport.html",false);
 	public static ExtentTest test;
 	@Before
 	public void setUp(Scenario Scenario) {
